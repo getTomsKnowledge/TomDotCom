@@ -4,7 +4,7 @@
   "description": "My Virtual Twin.  Git my good side.",
   "main": "index.js",
   "scripts": {
-    "build": "npm run build"
+    "build": "react-scripts build"
   },
   "repository": {
     "type": "git",
