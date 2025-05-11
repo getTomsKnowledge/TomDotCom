@@ -1,0 +1,19 @@
+{
+  "name": "tomdotcom",
+  "version": "1.0.0",
+  "description": "My Virtual Twin.  Git my good side.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo hello"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/getTomsKnowledge/TomDotCom.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/getTomsKnowledge/TomDotCom/issues"
+  },
+  "homepage": "https://github.com/getTomsKnowledge/TomDotCom#readme"
+}
