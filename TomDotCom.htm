@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <!-- Boilerplate meta tags, responsive display -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Main: metadata -->
+  <meta name="author" content="Tom West">
+  <meta name="keywords" content="homepage, personal, personal website, log, diary, virtual twin, digital twin">
+  <meta name="description" content="My virtual twin.">
+  <title>Tom.com</title>
+  <link rel="icon" href="Master_Sword_Lead.ico"> <!-- By Nintendo - Zelda Wiki, Fair use, https://en.wikipedia.org/w/index.php?curid=68912249 -->
+  
+  <!-- Main: formatting (CSS) -->
+  <link rel="stylesheet" href="MAIN/CSS/main.css">
+  
+</head>
+<body>
+  <header>
+    <nav class="topnav">
+      <a class="active" href="#home">Home</a>
+      <div class="dropdown">
+        <button class="dropbtn">Pages
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="Pages/Blog/Blog.htm" title="My Blog">Blog</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Learning
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="Learning/Learning.htm" title="Current Studies">Learning</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Administrative
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="Administrative/About/About.htm" title="About Tom.com">About</a>
+          <a href="Administrative/Contact/Contact.htm" title="Contact Information">Contact</a>
+          <a href="Administrative/Requirements/TomDotCom_Requirements.htm" title="Requirements Derivation">Requirements</a>
+          <a href="Administrative/References/References.htm" title="References">References</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div>
+    <h1>
+      Welcome to Tom.com!
+    </h1>
+  </div>
+  <footer style="text-align:center">
+    <p id="datetime"></p>
+    <script>document.getElementById('datetime').innerHTML = Date();</script>
+    <p>Tom.com &copy;2025, Tom West</p>
+  </footer>
+</body>
+</html>

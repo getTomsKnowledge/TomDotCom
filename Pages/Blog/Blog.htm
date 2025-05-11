@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <!-- Browser Responsiveness -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Site Metadata -->
+  <title>Blog</title>
+  <link rel="icon" href="helloWorld.ico">
+  <meta name="author" content="Tom West"
+  <meta name="keywords" content="Blog, blog, journal, engineering, thoughts, philosophy, mathematics, science">
+  <meta name="description" content="Tom West's blog.">
+
+  <!-- Style -->
+  <link rel="stylesheet" href="Blog.css">
+
+  <!-- Scripts -->
+  <!-- <script src="helloworld.js"></script> -->
+
+</head>
+<body>
+  <nav class="topnav">
+    <a class="active" href="../../TomDotCom.htm" alt="Homepage">HOME</a>
+  </nav>
+  <script>
+  tomsNamespace = { bruteNum: 600851475143 };
+  </script>
+  <h1>Tom's Blog</h1>
+  <!-- Post 5 -->
+  <section style="border: 3px solid black">
+    <header>
+      <h2 style="text-align:center">Off-Friday Frivolities (Friday - May 9, 2025)</h2>
+    </header>
+    <article style="text-align:center; margin: 10px 20vw;">
+      <p>
+        Hello, again.  Things to think about:
+        <ul>
+        <li style="list-style-type: '--'; margin: 1px 20vw; text-align: left;"> Website Dev </li>
+        <li style="list-style-type: '--'; margin: 1px 20vw; text-align: left;"> Prime Factorization</li>
+        <li style="list-style-type: '--'; margin: 1px 20vw; text-align: left;"> Cryptography</li>
+        <li style="list-style-type: '--'; margin: 1px 20vw; text-align: left;"> OpenAI API</li>
+        <li style="list-style-type: '--'; margin: 1px 20vw; text-align: left;"> Chores</li>
+        <li style="list-style-type: '--'; margin: 1px 20vw; text-align: left;"> Life Plan</li>
+        <li style="list-style-type: '--'; margin: 1px 20vw; text-align: left;"> Lists</li>
+        <li style="list-style-type: '--'; margin: 1px 20vw; text-align: left;"> Euler Project Exercise</li>
+        <li style="list-style-type: '--'; margin: 1px 20vw; text-align: left;"> FTL Travel</li>
+        <li style="list-style-type: '--'; margin: 1px 20vw; text-align: left;"> John H.'s very-belated birthday</li>
+        <li style="list-style-type: '--'; margin: 1px 20vw; text-align: left;"> Throwing out/organizing old papers</li>
+        <li style="list-style-type: '--'; margin: 1px 20vw; text-align: left;"> Memoir</li>
+        <li style="list-style-type: '--'; margin: 1px 20vw; text-align: left;"> Triathlon?</li>
+        <li style="list-style-type: '--'; margin: 1px 20vw; text-align: left;"> Job Search</li>
+        <li style="list-style-type: '--'; margin: 1px 20vw; text-align: left;"> Magooby's with Brett</li>
+      </p>
+      <br><br>
+      <p id="chat">
+        <button onclick="chat()">Call OpenAI API</button>
+      </p>
+
+      <script>
+        async function chat() {
+          // Simulated "API" response
+          const fakeResponse = "Once upon a time, a shy unicorn painted rainbows in the moonlight.";
+          document.getElementById('chat').innerHTML = fakeResponse;
+        }
+      </script>      
+    </article>
+  </section>
+
+  
+  <section style="border: 3px solid black">
+    <header>
+      <h2 style="text-align:center">A Prime Example (Monday - April 7, 2025)</h2>
+    </header>
+    <article style="text-align:center">
+      <p>
+        <code>600851475143</code><br><br>
+        That's the number Chat has assigned me to crack for prime factors on my ongoing quest<br>
+        to be like <del>Mike</del>Euler.  The prompt:<br><br><br>
+        <ul style="margin: 10px 30%">
+          <li><b>Me:</b> Project Euler continues.<br><br><br></li>
+          <li><b>ChatGPT:</b> <i>Welcome back, thinker.<br><br>
+          What problem shall we tackle today? Are we continuing a specific Euler problem or starting fresh? Either way, I’m ready to sharpen your edges.
+          </i><br><br><br></li>
+          <li><b>Me:</b> Start fresh:<br><br><br></li>
+          <li><b>ChatGPT:</b><i> Excellent. Let's choose one that balances elegance and depth—a warm-up for your intellect, but with doors leading to deeper theorems.<br><br>
+          <b>Project Euler Problem #3: Largest Prime Factor<br><br>
+          &emsp;&emsp;&emsp;The prime factors of 13195 are 5, 7, 13 and 29.<br>
+          &emsp;&emsp;&emsp;What is the largest prime factor of the number 600851475143?</b><br>
+          <br><br>
+          This is a classic: it invites a brute-force approach but rewards insight into prime decomposition and optimization.
+          <br><br>
+          Would you like to begin with your own implementation? Or shall I walk you through a scaffolded approach first, teasing out the mathematical and algorithmic core?
+          </i><br><br><br></li>
+        </ul>
+      </p>
+      <p>
+      In working this excercise, I have made some (possibly-incomplete, possibly-incorrect) observations:<br>
+        <ul>
+          <li>Our number is odd.</li>
+          <li>Our number is not a multiple of 5.</li>
+          <li>Our number is on the order of 6 x 10<sup>12</sup> (i.e. pretty brutish)
+          <br> --> This is unequal-to-but-on-the-order-of 15 factorial, 2 to the 40th power, the 27th power of the natural number, the 63rd Fibonnacci Sequence term.</li>
+          <li>Every integer, <code>n</code>, in the set of integers greater than two contains a finite number of primes.</li>
+          <li>(An even number can't have prime factors other than 2: a prime-only factorization consists of two odd numbers.)</li>
+          <li>Factorization occurs about a 'center of factorization,' wherein a binary search can occur with quasi-mirrored steps between test numbers (one smaller than roughly <code>n/4</code>, the other larger)
+          <li>Factoring of powers has a floor: 2.  The maximum exponent for a factor of <code>n</code> is <code>floor[log<sub>2</sub>(n)]</code>.  (As corollary, any other power factorization will be of a lesser degree/lower order.)</li>
+          <li>Is there a density or distribution function for primes?</li>
+          <li><code>log<sub>n</sub>(n) = 1</code>.</li>
+          <li><code>log<sub>k</sub>(p) - log<sub>k</sub>(q)</code> is finite for <code>p,q &lt; n, k &isin; &naturals;</code>.</li>
+          <li><code>log<sub>k</sub>(n) = &Sigma;log<sub>k</sub>(p<sub>i</sub>)</code>
+          <li><code>n = &Pi;p<sub>i</sub></code>
+          <li><code>&#8756; log<sub>k</sub>[&Pi;p<sub>i</sub>] = &Sigma;log<sub>k</sub>(p<sub>i</sub>)</code></li>
+          <li>Ruling out 2 in the two-factor solution space cuts the space in half. The solution space at each test factor in a sequential walk up from 2 probably follows a negative sigmoid curve?</li>
+        </ul>
+      </p>
+      <p>
+      So, then, we try some brute-force techniques:<br>
+        <ul>
+          <li><code id="bruteNumber2"></code> <b>/ 2</b> = <code id="try2"></code> --> <strong>Nope.</strong>
+          <script>document.getElementById('bruteNumber2').innerHTML = tomsNamespace.bruteNum</script>
+          <script>document.getElementById('try2').innerHTML = tomsNamespace.bruteNum / 2;</script>
+          </li>
+          <li><code id="bruteNumber3"></code> <b>/ 3</b> = <code id="try3"></code> --> <strong>Nope, but has a patterned remainder?</strong>
+          <script>document.getElementById('bruteNumber3').innerHTML = tomsNamespace.bruteNum</script>
+          <script>document.getElementById('try3').innerHTML = tomsNamespace.bruteNum / 3;</script>
+          </li>
+          <li><code id="bruteNumber7"></code> <b>/ 7</b> = <code id="try7"></code> --> <strong>Nope.</strong>
+          <script>document.getElementById('bruteNumber7').innerHTML = tomsNamespace.bruteNum</script>
+          <script>document.getElementById('try7').innerHTML = tomsNamespace.bruteNum / 7;</script>
+          </li>
+          <li><code id="bruteNumber11"></code> <b>/ 11</b> = <code id="try11"></code> --> <strong>Nope, patterned remainder?</strong>
+          <script>document.getElementById('bruteNumber11').innerHTML = tomsNamespace.bruteNum</script>
+          <script>document.getElementById('try11').innerHTML = tomsNamespace.bruteNum / 11;</script>
+          </li>
+          <li><code id="bruteNumber13"></code> <b>/ 13</b> = <code id="try13"></code> --> <strong>Nope.</strong>
+          <script>document.getElementById('bruteNumber13').innerHTML = tomsNamespace.bruteNum</script>
+          <script>document.getElementById('try13').innerHTML = tomsNamespace.bruteNum / 13;</script>
+          </li>          
+        </ul>
+      </p>
+      <p>
+      'K.  What if we modulo, instead of a vanilla division?  Will the remainder tell us something?  Can we operate on modulos of different test factors, add them together, multiply, to extract some info?<br><br>
+      Can we change basis to see if insights pop out: 2, 3, etc...?
+      Can we perform 'spectral' analysis, look for signs of 'harmonics' and non-noise for numbers with increasingly-more factors (with a prime as noisiest)?
+      <br>
+      Can our number be generated by a well-known sequence?
+      <br>
+      When have I earned the use of a calculator?
+      </p>
+      
+    </article>
+  </section>
+  
+  
+  <section style="border: 3px solid black">
+    <header>
+      <h2 style="text-align:center">What's in a Blog? (Sunday March 30, 2025)</h2>
+    </header>
+    <article style="text-align:center">
+      <p>
+        Trying to figure out what the content of this blog should be.  Thoughts include:<br>
+        <ul style="margin: 10px 30%">
+          <li>Ideas, brainstorming, wastebook</li>
+          <li>Diary/journal/planner: Work through emotions, log daily life, plan future, goal set</li>
+          <li>Creative output: Poetry, prose, music, unpublished works</li>
+          <li>Publication: Gain following, publish for an audience</li>
+          <li>...Whatever can be accomplished through visible bits and bytes...<li>
+        </ul>
+        <br>
+        Today's activities include:
+        <ul style="margin: 10px 40%">
+          <li>Play guitar: "Roundabout" by Yes.</li>
+          <li>Go for a walk.</li>
+          <li>NYT Sunday Crossword: 30:54.</li>
+          <li>Lunch with dad.</li>
+          <li>Dinner with mom.</li>
+          <li>Read Cryptonomicon.</li>
+          <li>Job search.</li>
+        </ul>
+      </p>
+    </article>
+  </section>
+
+  <section style="border: 3px solid black">
+    <header>
+      <h2 style="text-align:center">Post-Dance (Saturday March 29, 2025)</h2>
+    </header>
+    <article style="text-align:center">
+      <p><i>
+      Hawking's monotone<br>
+      booms over the ballroom mob:<br>
+      Push and pull and merge.
+      </i></p>
+    </article>
+  </section>
+  <br>
+  <section style="border: 3px solid black">
+    <header>
+      <h2 style="text-align:center">Hello, World! (Friday March 28, 2025)</h2>
+    </header>
+    <article style="text-align:center">
+      <code>&emsp;&emsp;&emsp;firstPostContent = "Hello, World!";</code>
+    </article>
+    <br><br><br>
+    <footer style="text-align:center">
+    </footer>
+  </section>
+  <br><br><br>
+  <footer style="text-align:center">
+      <p id="datetime"></p>
+      <script>document.getElementById('datetime').innerHTML = Date();</script>
+      <p>Tom.com &copy;2025, Tom West</p>
+  </footer>
+</body>
+</html>

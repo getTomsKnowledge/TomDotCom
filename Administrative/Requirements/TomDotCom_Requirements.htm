@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <!-- Responsive Design -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8">
+  
+  <!-- Metadata -->
+  <title>Tom.com Requirements</title>
+  <link rel="icon" href="TenCommandmentsSVG.ico" type="image/x-icon">
+  <meta name="author" content="Tom West">
+  <meta name="keywords" content="systems engineering, system of systems, requirements, system engineering">
+  <meta name="description" content="Systems Engineering Analysis of TomDotCom: Performance requirements, system functional/design constraint/interface/environmental.">
+  
+  <!-- Style/Formatting -->
+  <link rel="stylesheet" href="ReqsStyle.css">
+  
+</head>
+<body>
+
+  <header>
+    <a href="../../TomDotCom.htm" title="Homepage">(Go Home)</a>
+  </header>
+  <div style="width:100%; margin: auto;">
+    <h1 id="top"><strong><u>Tom.com:</u></strong><br><i>Requirements</i>
+    </h1>
+  </div>
+  <br><br><br>
+  <p>
+    Purpose: To build and grow a digital twin of myself.
+  </p>
+  <br><br>
+  <!-- Tables -->
+  <section style="overflow-x:auto;">
+    <article>
+      <table id="requirements">
+        <caption><h2>System Performance Specification<h2></caption>
+        <tr>
+          <th>Topic</th>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Text</th>
+          <th>Tier</th>
+        </tr>
+        <tr class="DarkGray">
+          <th rowspan="3">Accessibility</th>
+          <td>PSPEC-XXXX</td>
+          <td>Readability, Laptop</td>
+          <td>The Website shall be easy to read when viewed by a 45-year-old person on a standard 1920p x 1080p laptop display.(T)</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>PSPEC-XXXX</td>
+          <td>Readability, Smartphone (T)</td>
+          <td>The Website shall be easy to read when viewed by a 45-year-old person on a standard 360p x 800p smartphone display. (T)</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>PSPEC-0002</td>
+          <td>Readability, Tablet (O)</td>
+          <td>The Website shall be easy to read when viewed by a 45-year-old person on a standard 810 x 1080 tablet display. (O)</td>
+          <td>3</td>
+        </tr>
+        <tr class="DarkGray">
+          <th rowspan="3">Content</th>
+          <td>PSPEC-XXXX</td>
+          <td>Content, Homepage (T)</td>
+          <td>The Website shall include a homepage.(T)</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>PSPEC-XXXX</td>
+          <td>Content, Requirements Specification (T)</td>
+          <td>The Website shall include a requirements specification page. (T)</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>PSPEC-XXXX</td>
+          <td>Content, Book List (O)</td>
+          <td>The Website shall include a booklist page. (O)</td>
+          <td>3</td>
+        </tr>
+        <tr class="DarkGray">
+          <th rowspan="6">Engagement</th>
+          <td>PSPEC-XXXX</td>
+          <td>Average Dwell Time (Time on Page) (T)</td>
+          <td>The Website's average dwell time shall exceed one (1) minute. (T)</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>PSPEC-XXXX</td>
+          <td>Average Dwell Time (Time on Page) (O)</td>
+          <td>The Website's average dwell time should exceed five (5) minutes. (O)</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>PSPEC-XXXX</td>
+          <td>Bounce Rate (T)</td>
+          <td>The Website's bounce rate shall not exceed 50%. (T)</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>PSPEC-XXXX</td>
+          <td>Bounce Rate (O)</td>
+          <td>The Website's bounce rate shall not exceed 10%. (O)</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>PSPEC-XXXX</td>
+          <td>Click-Through Rate (CTR) (T)</td>
+          <td>The Website's click-through rate (CTR) shall exceed 10%. (T)</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>PSPEC-XXXX</td>
+          <td>Click-Through Rate (CTR) (O)</td>
+          <td>The Website's click-through rate should exceed 20%. (O)</td>
+          <td>2</td>
+        </tr>
+        <tr class="DarkGray">
+          <th rowspan="2">Formatting</th>
+          <td>PSPEC-XXXX</td>
+          <td>Standard Text Font (T)</td>
+          <td>The Website shall style body text using Trebuchet MS font. (T)</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>PSPEC-XXXX</td>
+          <td>Standard Text Size (T)</td>
+          <td>The Website shall size text fonts at no less than 11-pt font. (T)</td>
+          <td>3</td>
+        </tr>
+        <tr class="DarkGray">
+          <th rowspan="2">Backend Demand</th>
+          <td>PSPEC-XXXX</td>
+          <td>[Example Name] (T)</td>
+          <td>[Example Text](T)</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>PSPEC-XXXX</td>
+          <td>[Example Name](O)</td>
+          <td>[Example Text](O)</td>
+          <td>2</td>
+        </tr>
+        <tr class="DarkGray">
+          <th rowspan="2">Maintenance</th>
+          <td>PSPEC-XXXX</td>
+          <td>[Example Name] (T)</td>
+          <td>[Example Text](T)</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>PSPEC-XXXX</td>
+          <td>[Example Name](O)</td>
+          <td>[Example Text](O)</td>
+          <td>2</td>
+        </tr>
+        <tr class="DarkGray">
+          <th rowspan="2">Access Management</th>
+          <td>PSPEC-XXXX</td>
+          <td>[Example Name] (T)</td>
+          <td>[Example Text](T)</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>PSPEC-XXXX</td>
+          <td>[Example Name](O)</td>
+          <td>[Example Text](O)</td>
+          <td>2</td>
+        </tr>
+        <tr class="DarkGray">
+          <th rowspan="2">Cybersecurity</th>
+          <td>PSPEC-XXXX</td>
+          <td>[Example Name] (T)</td>
+          <td>[Example Text](T)</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>PSPEC-XXXX</td>
+          <td>[Example Name](O)</td>
+          <td>[Example Text](O)</td>
+          <td>2</td>
+        </tr>
+        <tr class="DarkGray">
+          <th rowspan="2">Hosting</th>
+          <td>PSPEC-XXXX</td>
+          <td>[Example Name] (T)</td>
+          <td>[Example Text](T)</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>PSPEC-XXXX</td>
+          <td>[Example Name](O)</td>
+          <td>[Example Text](O)</td>
+          <td>2</td>
+        </tr>
+        <tr class="DarkGray">
+          <th rowspan="2">Load Sharing, Frontend / Backend</th>
+          <td>PSPEC-XXXX</td>
+          <td>[Example Name] (T)</td>
+          <td>[Example Text](T)</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>PSPEC-XXXX</td>
+          <td>[Example Name](O)</td>
+          <td>[Example Text](O)</td>
+          <td>2</td>
+        </tr>
+        <tr class="DarkGray">
+          <th rowspan="2">Launch</th>
+          <td>PSPEC-XXXX</td>
+          <td>[Example Name] (T)</td>
+          <td>[Example Text](T)</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>PSPEC-XXXX</td>
+          <td>[Example Name](O)</td>
+          <td>[Example Text](O)</td>
+          <td>2</td>
+        </tr>
+        <tr class="DarkGray">
+          <th rowspan="2">Languages</th>
+          <td>PSPEC-XXXX</td>
+          <td>Official Language: American English (T)</td>
+          <td>Website source text shall be written in American English. (T)</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>PSPEC-XXXX</td>
+          <td>Secondary Language: Standard Spanish (O)</td>
+          <td>The Website shall offer a Standard Spanish translation of its source text. (O)</td>
+          <td>3</td>
+        </tr>
+      </table>
+    </article>
+    <aside>
+      <img src="TenCommandmentsSVG.ico" title="The Website shalt..." alt="The Website shalt..." style="float: center; width:300px; height:300px; padding: 10px;">
+      <br><br><br>
+      <u><b>Problem Statement:</b></u><br><br>
+            
+      I want to make a personal website.  It will explore my identity,
+      store my ideas, investigate engineering/science/mathematics problems,
+      aid self-expression, and twin my mind.<br><br>
+      
+      I want my website to help me grow as a person, as a creator/writer, and
+      as an engineer/scientist/mathematician.  My website will help me gain positive
+      recognition/greater access to development opportunities through
+      networking and free sharing of ideas.<br><br><br>
+      
+          
+    </aside>
+    <div class="clearfloats"></div>
+  </section>
+  <footer>
+    <br><br>
+    <p><a href="#top" title="Back to the top" style="text-align:center">^ Back to Top ^</a><br>
+    <p id="datetime" style="text-align:center"></p>
+    <script>document.getElementById('datetime').innerHTML = Date();</script>
+    <p style="text-align:center">Tom.com &copy;2025, Tom West</p>
+  </footer>
+</body>
+</html>
